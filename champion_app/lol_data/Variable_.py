@@ -1,16 +1,4 @@
-import Class_
-import requests
-
-url = "http://ddragon.leagueoflegends.com/cdn/13.19.1/data/fr_FR/champion.json"
-req = requests.get(url)
-res = req.json()
-data = res.get('data')
-champ_list = list(data)
-
-url_ = 'http://ddragon.leagueoflegends.com/cdn/{}/data/fr_FR/champion/{}.json'
-
-version = '13.18.1'
-format_ = res.get('format')
+from django_lol_project.champion_app.lol_data import Class_
 
 Aatrox = Class_.Champion(0)
 Ahri = Class_.Champion(1)
@@ -179,8 +167,15 @@ Zoe = Class_.Champion(163)
 Zyra = Class_.Champion(164)
 
 champ_class_list = [
-    Aatrox, Ahri, Akali, Akshan, Alistar, Amumu, Anivia,
-    Annie, Aphelios,
+    Aatrox,
+    Ahri,
+    Akali,
+    Akshan,
+    Alistar,
+    Amumu,
+    Anivia,
+    Annie,
+    Aphelios,
     Ashe,
     AurelionSol,
     Azir,
@@ -338,3 +333,4 @@ champ_class_list = [
     Zoe,
     Zyra,
 ]
+

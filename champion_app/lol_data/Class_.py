@@ -1,11 +1,11 @@
-import Variable_
 import requests
+from django_lol_project.champion_app.lol_data.Reference_ import champ_list, version, url_
 
 class Champion:
     def __init__(self, list_index):
-        self.name_index = Variable_.champ_list[list_index]
+        self.name_index = champ_list[list_index]
 
-        self.url = Variable_.url_.format(Variable_.version, Variable_.champ_list[list_index])
+        self.url = url_.format(version, champ_list[list_index])
         self.url_image_loading = 'ddragon.leagueoflegends.com/cdn/img/champion/loading/{}_0.jpg'.format(self.name_index)
 
         req_ = requests.get(self.url)
@@ -22,4 +22,4 @@ class Champion:
         self.difficulty = self.dict_[self.name_index]['info']['difficulty']
         self.description = self.dict_[self.name_index]['lore']
 
-        #self.list = list(self.dict_[self.name_index])
+        self.li = [self.name, self.classification, self.description]

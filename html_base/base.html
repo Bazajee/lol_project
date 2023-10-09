@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Titre Titre </title>
-    <h1> Site des Champions</h1>
+    <a href="{% url 'homeview' %}">
+    <h1>Le site des légendes </h1>
+    </a>
 </head>
 <body>
-<a href="{% url 'admin'%}">
-    <h1>Admin</h1>
-</a>
+
 {% block content %}
 {% endblock  %}
 </body>
