@@ -1,4 +1,4 @@
-from django_lol_project.champion_app.lol_data import Class_
+from champion_app.game_data import Class_
 
 Aatrox = Class_.Champion(0)
 Ahri = Class_.Champion(1)

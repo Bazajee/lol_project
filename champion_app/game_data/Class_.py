@@ -1,5 +1,5 @@
 import requests
-from django_lol_project.champion_app.lol_data.Reference_ import champ_list, version, url_
+from champion_app.game_data.Reference_ import champ_list, version, url_
 
 class Champion:
     def __init__(self, list_index):

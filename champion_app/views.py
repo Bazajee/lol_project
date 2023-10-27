@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-from ._variable_ import Variable_, Class_
+from champion_app.game_data import Variable_
 
 
 def homeview(request):
@@ -10,5 +10,5 @@ def homeview(request):
 
 def championpage(request):
 
-    Aatrx = Variable_.aatrx
-    return render(request, 'champion_app/champion_page.html', context={"Aatrx": Aatrx,})
+    Aatrx = Variable_.Aatrox
+    return render(request, 'champion_app/champion_page.html', context={"Aatrx": Aatrx, })
