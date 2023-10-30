@@ -10,5 +10,6 @@ def homeview(request):
 
 def championpage(request):
 
-    Aatrx = Variable_.Aatrox
-    return render(request, 'champion_app/champion_page.html', context={"Aatrx": Aatrx, })
+    Aatrox_name, Aatrox_desctiption = Variable_.Aatrox.name, Variable_.Aatrox.description
+    champ_class_list = Variable_.champ_class_list
+    return render(request, 'champion_app/champion_page.html', context={"Aatrox_name": Aatrox_name,"Aatrox_description":Aatrox_desctiption, "champ_class_list": champ_class_list, })
